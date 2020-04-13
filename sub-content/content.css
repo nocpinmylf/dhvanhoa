@@ -1,0 +1,19 @@
+.news-item {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: justify;
+  border-top: 1px dotted #313335;
+}
+
+.news-item>img {
+  width: 180px;
+  height: 100px;
+}
+
+.news-item>a {
+  margin-left: 1em;
+  font-size: 1.2em;
+  color: #0070a3;
+}
