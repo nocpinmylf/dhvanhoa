@@ -1,3 +1,12 @@
+// declare valuables
+let slides = document.getElementsByClassName("slides");
+let dots = document.getElementsByClassName("demo");
+const searchValue = document.getElementById('search-box');
+const searchBtn = document.getElementById('search-btn');
+const navbar = document.getElementById("nav-content-collasp");
+const dropdownNav = document.getElementById("header-nav-list");
+
+// slide
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -10,31 +19,26 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("slides");
-  let dots = document.getElementsByClassName("demo");
+
   if (n > slides.length) slideIndex = 1;
   if (n < 1) slideIndex = slides.length;
-  for (i = 0; i < slides.length; i++) {
+  for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
+  for (let i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" slide-active", "");
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " slide-active";
 }
 
-// search
-const searchValue = document.getElementById('search-box');
-const searchBtn = document.getElementById('search-btn');
+// search box
 searchBtn.addEventListener('click', () => {
   searchBtn.setAttribute('href', `https://www.google.nl/search?q=${searchValue.value}+huc.edu.vn`);
 });
 
 // get time 
-const time = document.getElementById('time').innerText = getTime();
-
+document.getElementById('time').innerText = getTime();
 function getTime() {
   let date = new Date();
   return "Ngày: " + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
@@ -79,3 +83,8 @@ $('#collaspe-btn').click(function () {
   }
 });
 
+// modal
+$('#exampleModal').on('show.bs.modal', event => {
+  let button = $(event.relatedTarget);
+  let modal = $(this);
+});

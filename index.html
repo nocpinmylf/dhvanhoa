@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="vi">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <title>Đại học văn hóa Hà Nội</title>
@@ -14,16 +14,16 @@
 </head>
 
 <body>
-  <header id="header">
+  <header id="header"
     <div class="banner">
       <img src="Image/banner.jpg" alt="HUC Banner" id="banner-img">
     </div>
     <nav id="header-nav">
+      <div id="nav-content-collasp">
+        <button type="button" id="collaspe-btn">☰</button>
+        <a href=""><img src="Image/dhvh-logo.jpeg" alt="logo" id="logo"></a>
+      </div>
       <ul class="header-nav-list">
-        <div id="nav-content-collasp">
-          <button type="button" id="collaspe-btn">☰</button>
-          <a href=""><img src="Image/dhvh-logo.jpeg" alt="logo" id="logo"></a>
-        </div>
         <li>
           <a href="" class="nav-content">TRANG CHỦ</a>
         </li>
@@ -70,7 +70,32 @@
         <li><a href="" class="nav-content">ĐIỂM NHẤN </a></li>
         <li><a href="" class="nav-content">TUYỂN SINH</a></li>
         <li><a href="" class="nav-content">LIÊN HỆ</a></li>
-        <li><a href="" class="nav-content">ĐĂNG NHẬP</a></li>
+        <li><a href="" class="nav-content" data-toggle="modal" data-target="#login">ĐĂNG NHẬP</a></li>
+
+        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Đăng Nhập</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <input type="email" name="email" id="email" placeholder="Nhập địa chỉ email" required>
+                  <input type="password" name="password" id="password" placeholder="Nhập mật khẩu" required>
+                  <input type="checkbox" name="remember" id="remember"><label for="remember">Ghi Nhớ?</label>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-signup">Đăng Ký</button>
+                <button type="button" class="btn btn-login">Đăng Nhập</button>
+                <button type="button" class="btn btn-close" data-dismiss="modal">Đóng</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </ul>
     </nav>
   </header>
@@ -420,33 +445,30 @@
   </main>
 
   <footer id="footer">
-    <p id="uni-name">Trường Đại học Văn Hoá Hà Nội - Hanoi University Of Culture</p>
-    <div id="info">
-      <div id="address">
-        <iframe id="map" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1242.810805656317!2d105.82256534163663!3d21.023708475607243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab70b95c36c5%3A0x6cc1da673ea579d3!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBWxINuIGjDs2EgSMOgIE7hu5lp!5e0!3m2!1svi!2s!4v1585503868543!5m2!1svi!2s"></iframe>
-        <address><i class="fas fa-map-marked-alt"></i> Địa chỉ: 418 Đường La Thành - Quận Đống Đa - Hà Nội- Việt
-          Nam</address>
-      </div>
-      <div>
-        <ul id="contact">
-          <li id="email"><a href="mailto:daihocvanhoahanoi@huc.edu.vn"><i class="far fa-envelope"></i>
-              daihocvanhoahanoi@huc.edu.vn</a></li>
-          <li id="tel"><a href="tel:+842438511971"><i class="fas fa-phone"></i> (+84) 2438.511.971</a></li>
-          <li id="fax"><a href="tel:+842435141629"><i class="fas fa-fax"></i> (+84) 2435.141.629</a></li>
-          <li class="social">
-            <a href="https://www.facebook.com/huc1959/" target="_blank" rel="noopener noreferrer"><i
-                class="fab fa-facebook-f"></i></a>
-            <a href="https://www.youtube.com/c/TrườngĐạihọcVănhóaHàNội" target="_blank" rel="noopener noreferrer"><i
-                class="fab fa-youtube"></i></a>
-          <li>
-            <p id="online">Đang truy cập: 1</p>
-            <p id="visited">Lượt truy cập: 1.902.321</p>
-          </li>
-        </ul>
+    <p id="uni-name">© 2020 - Trường Đại học Văn Hoá Hà Nội - Hanoi University Of Culture</p>
+    <div id="footer-content">
+      <div id="info">
+        <div id="contact">
+          <div id="email"><a href="mailto:daihocvanhoahanoi@huc.edu.vn"><i class="far fa-envelope"></i> daihocvanhoahanoi@huc.edu.vn</a></div>
+          <div id="tel"><a href="tel:+842438511971"><i class="fas fa-phone"></i> (+84) 2438.511.971</a></div>
+          <div id="fax"><a href="tel:+842435141629"><i class="fas fa-fax"></i> (+84) 2435.141.629</a></div>
+          <div id="social">
+            <a href="https://www.facebook.com/huc1959/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/c/TrườngĐạihọcVănhóaHàNội" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-youtube"></i></a>
+          </div>
+          <p id="visited">Lượt truy cập: <a href="https://www.webfreecounter.com/" target="_blank"><img src="https://www.webfreecounter.com/hit.php?id=grvkcqaa&nd=9&style=10" alt="10000" rel="noopener noreferrer"></a></p>
+        </div>
+        <div id="address">
+          <iframe id="map" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1242.810805656317!2d105.82256534163663!3d21.023708475607243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab70b95c36c5%3A0x6cc1da673ea579d3!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBWxINuIGjDs2EgSMOgIE7hu5lp!5e0!3m2!1svi!2s!4v1585503868543!5m2!1svi!2s"></iframe>
+          <address><i class="fas fa-map-marked-alt"></i> Địa chỉ: 418 Đường La Thành - Quận Đống Đa - Hà Nội- Việt
+            Nam</address>
+        </div>
       </div>
     </div>
-    <div id="copyright">© 2020 - Trường Đại Học Văn Hóa Hà Nội</div>
+    
   </footer>
   <!-- Optional JavaScript -->
   <script async src="javascript.js"></script>
