@@ -225,21 +225,6 @@ li.dropdown:hover>.dropdown-menu {
   color: #fff;
 }
 
-.under-row {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.small-img {
-  width: 12.1vw;
-}
-
-.small-img>img {
-  width: 100%;
-  height: 80px;
-}
-
 .demo {
   opacity: 0.4;
   width: 100%;
@@ -572,10 +557,6 @@ p {
     height: 350px;
   }
 
-  .small-img {
-    width: 15.3vw;
-  }
-
   .prev, .next {
     top: 22em;
     margin: auto 1.5vw;
@@ -611,10 +592,6 @@ p {
 
   .prev, .next {
     top: 15em;
-  }
-
-  .small-img>img {
-    height: 30px;
   }
 
   #news-section>div>div {
