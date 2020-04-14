@@ -36,10 +36,15 @@ a:hover,
 
 /* header======================== */
 
-/* #lang {
+#lang-eng {
   width: 25px;
   height: 16px;
-} */
+}
+
+.modal-header {
+  background-color: #b84a34;
+  color: #ffffff;
+}
 
 .modal-body input {
   width: 80%;
@@ -87,6 +92,7 @@ a:hover,
 
 #header-nav {
   background-color: #b84a34;
+  z-index: 100;
 }
 
 #collaspe-btn {
@@ -403,7 +409,6 @@ input::placeholder {
   color: #fff;
   flex-grow: 1;
   text-align: center;
-  transform: skew(-10deg);
   border-color: transparent;
   margin: auto 1px;
 }
@@ -492,8 +497,8 @@ input::placeholder {
   background-color: #797979;
   padding: 10px;
   margin-bottom: 10px;
-  text-align: left  ;
-  font-size: 2em;
+  text-align: left;
+  font-size: 1.5em;
 }
 
 #contact {
@@ -579,6 +584,10 @@ p {
     width: 2.5em;
     padding: 5px;
     border-radius: 50%;
+  }
+
+  #lang-eng {
+    border-radius: 0%;
   }
 
   #vertical-ads {
