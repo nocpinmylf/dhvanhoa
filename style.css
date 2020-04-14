@@ -36,6 +36,27 @@ a:hover,
 
 /* header======================== */
 
+#social {
+  /* height: 100px;
+  width: 100px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.fb, .yt {
+  width: 3.5em;
+  display: block;
+  position: fixed;
+  right: 1em;
+  bottom: 4em;
+  z-index: 999;
+}
+
+.fb {
+  bottom: 9em;
+}
+
 #lang-eng {
   width: 25px;
   height: 16px;
@@ -225,13 +246,7 @@ li.dropdown:hover>.dropdown-menu {
   color: #fff;
 }
 
-.demo {
-  opacity: 0.4;
-  width: 100%;
-  cursor: pointer;
-}
-
-.slide-active, .demo:hover {
+.slide-active {
   opacity: 1;
   transition: .2s;
 }
@@ -495,14 +510,6 @@ address {
   text-align: center;
 }
 
-#social {
-  font-size: 2em;
-}
-
-#social a {
-  margin: 0 .5em;
-}
-
 p {
   margin: 0;
 }
@@ -557,6 +564,10 @@ p {
     height: 350px;
   }
 
+  .small-img {
+    width: 15.3vw;
+  }
+
   .prev, .next {
     top: 22em;
     margin: auto 1.5vw;
@@ -594,6 +605,10 @@ p {
     top: 15em;
   }
 
+  .small-img>img {
+    height: 30px;
+  }
+
   #news-section>div>div {
     display: flex;
   }
@@ -626,7 +641,7 @@ p {
   #footer-content {
     padding: 2em;
   }
-  #social,
+
   #uni-name {
     text-align: center;
     font-size: 1.5em;

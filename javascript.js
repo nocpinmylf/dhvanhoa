@@ -1,6 +1,5 @@
 // declare valuables
 let slides = document.getElementsByClassName("slides");
-let dots = document.getElementsByClassName("demo");
 const searchValue = document.getElementById('search-box');
 const searchBtn = document.getElementById('search-btn');
 const navbar = document.getElementById("nav-content-collasp");
@@ -25,11 +24,7 @@ function showSlides(n) {
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" slide-active", "");
-  }
   slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " slide-active";
 }
 
 // search box
@@ -46,7 +41,7 @@ function getTime() {
 
 // vertical nav dropdown
 $('.sub-menu').hide();
-$('.menu-item>a').click(function () {
+$('.menu-item a').click(function () {
   $(this).parent('.menu-item').children('ul').slideToggle('100');
   $(this).find('.right').toggleClass('fa-caret-up fa-caret-down');
 });
