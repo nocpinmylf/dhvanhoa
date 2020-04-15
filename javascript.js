@@ -3,7 +3,13 @@ let slides = document.getElementsByClassName("slides");
 const searchValue = document.getElementById('search-box');
 const searchBtn = document.getElementById('search-btn');
 const navbar = document.getElementById("nav-content-collasp");
-const dropdownNav = document.getElementById("header-nav-list");
+const up = document.getElementsByClassName('up')[0];
+const down = document.getElementsByClassName('down')[0];
+const collaspBtn = document.getElementById('collaspe-btn');
+const dropdownList = document.querySelectorAll('#ver-nav .dropdown-menu');
+const dropdownBtn = document.querySelectorAll('#ver-nav .dropdown');
+const listStatus = {}; // sub dropdown menu
+
 
 // slide
 let slideIndex = 1;
@@ -27,6 +33,10 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
 }
 
+setInterval(() => {
+  plusSlides(1);
+}, 4000);
+
 // search box
 searchBtn.addEventListener('click', () => {
   searchBtn.setAttribute('href', `https://www.google.nl/search?q=${searchValue.value}+huc.edu.vn`);
@@ -46,40 +56,56 @@ $('.menu-item a').click(function () {
   $(this).find('.right').toggleClass('fa-caret-up fa-caret-down');
 });
 
-// responsive header navbar
-let dWidth;
-
-function resizeSlideBtn(width) {
-  $('.prev').css('top', width);
-  $('.next').css('top', width);
-}
-
-$(window).resize(function () {
-  dWidth = $(window).width();
-  if (dWidth > 1024) {
-    resizeSlideBtn('21em');
-    $('#header-nav li').removeAttr('style');
-  }
-  if (dWidth < 1024) {
-    resizeSlideBtn('22em');
-  }
-  if (dWidth < 768) {
-    resizeSlideBtn('15em');
-  }
+//responsive up down button
+window.addEventListener("scroll", () => {
+  let dheight = $(document).height();
+  window.pageYOffset < 200 ? up.style.display = "none" : up.style.display = "";
+  (dheight - window.pageYOffset) < 800 ? down.style.display = "none": down.style.display = "";
 });
 
-$('#collaspe-btn').click(function () {
-  $('#header-nav li').slideToggle('100');
-  if ($('.prev').css('top') == '720px') {
-    resizeSlideBtn('15em');
+// responsive ver-nav 
+const verNav = document.getElementById('ver-nav');
+const navElem = document.querySelectorAll('#ver-nav .nav-content'); 
+
+collaspBtn.addEventListener('click', () => {
+  if (verNav.style.width == '300px') {
+    verNav.style.width = '0px';
+    for (let i = 0; i < navElem.length; i++) {
+      navElem[i].classList.remove('appear');
+    }
   }
   else {
-    resizeSlideBtn('720px');
+    verNav.style.width = '300px';
+    for (let i = 0; i < navElem.length; i++) {
+      navElem[i].classList.add('appear');
+    }
   }
 });
 
-// modal
-$('#exampleModal').on('show.bs.modal', event => {
-  let button = $(event.relatedTarget);
-  let modal = $(this);
+// hide 
+let dWidth;
+window.addEventListener('resize', () => {
+  dWidth = window.innerWidth;
+  if (dWidth > 1024) {
+    verNav.style.width = '0px';
+  }
 });
+
+// drop down ver-nav
+function hideSubItem (element, bool) {
+	if(bool) element.style.display = 'none';
+	else element.style.removeProperty('display');
+}
+
+for (let i = 0; i < dropdownList.length; i++) {
+	listStatus[i] = true;
+	hideSubItem(dropdownList[i], listStatus[i]);
+}
+
+for (let i = 0; i < dropdownBtn.length; i++) {
+  dropdownBtn[i].addEventListener('click', (e) => {
+    e.preventDefault(); 
+    listStatus[i] = !listStatus[i];
+    hideSubItem(dropdownList[i], listStatus[i]);
+  });
+}

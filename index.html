@@ -18,31 +18,77 @@
     <div class="banner">
       <img src="Image/banner.jpg" alt="HUC Banner" id="banner-img">
     </div>
-    <nav id="header-nav">
-      <div id="nav-content-collasp">
-        <button type="button" id="collaspe-btn">☰</button>
+    <nav class="header-nav">
+      <div id="nav-content-collasp">  
         <div>
-          <a href=""><img src="Image/eng_flag.gif" alt="eng" id="lang-eng"></a>
           <a href=""><img src="Image/dhvh-logo.jpeg" alt="logo" id="logo"></a>
+          <a href=""><img src="Image/eng_flag.gif" alt="eng" id="lang-eng"></a>
         </div>
-        
+        <button type="button" id="collaspe-btn">☰</button>
       </div>
+
+      <div id="ver-nav">
+        <ul class="header-nav-list">
+          <li class="nav-content"><a href="index.html">TRANG CHỦ</a></li>
+          <li class="nav-content"><a href="">TIN TỨC</a></li>
+          <li class="nav-content"><a href="">THÔNG BÁO</a></li>
+          <li class="nav-content dropdown">
+            <a href="" class="dropdown-toggle">ĐÀO TẠO</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Đại Học Chính Quy</a></li>
+              <li><a href="#">Vừa Làm Vừa Học</a></li>
+              <li><a href="#">Sau Đại Học</a></li>
+            </ul>
+          </li>
+          <li class="nav-content dropdown">
+            <a href="" class="dropdown-toggle">NGHIÊN CỨU KHOA HỌC</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Đề Tài Đang Triển Khai</a></li>
+              <li><a href="#">Lý Lịch Khoa Học</a></li>
+              <li><a href="#">Giới Thiệu Chung</a></li>
+              <li><a href="#">Tạp Chí Nghiên Cứu Khoa Học</a></li>
+              <li><a href="#">Công Bố Khoa Học</a></li>
+            </ul>
+          </li>
+          <li class="nav-content dropdown">
+            <a href="" class="dropdown-toggle">HỢP TÁC QUỐC TẾ</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Giới Thiệu Chung</a></li>
+              <li><a href="#">Hoạt Động Hợp Tác</a></li>
+              <li><a href="#">Đối Tác</a></li>
+            </ul>
+          </li>
+          <li class="nav-content dropdown">
+            <a href="" class="dropdown-toggle">SINH VIÊN</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Cổng Thông Tin Sinh Viên</a></li>
+              <li><a href="#">Sổ Tay Sinh Viên</a></li>
+              <li><a href="#">Chính Sách</a></li>
+              <li><a href="#">Hoạt Động</a></li>
+              <li><a href="#">Cựu Sinh Viên</a></li>
+              <li><a href="#">Thư Điện Tử</a></li>
+            </ul>
+          </li>
+          <li class="nav-content"><a href="">ĐIỂM NHẤN </a></li>
+          <li class="nav-content"><a href="">TUYỂN SINH</a></li>
+          <li class="nav-content"><a href="" data-toggle="modal" data-target="#login">ĐĂNG NHẬP</a></li>
+        </ul>
+      </div>
+
       <ul class="header-nav-list">
-        <li>
-          <a href="" class="nav-content">TRANG CHỦ</a>
-        </li>
-        <li><a href="" class="nav-content">TIN TỨC</a></li>
-        <li><a href="" class="nav-content">THÔNG BÁO</a></li>
-        <li class="dropdown">
-          <a href="" class="nav-content dropdown-toggle" id="dt-dd" data-toggle="dropdown">ĐÀO TẠO</a>
+        <li class="nav-content"><a href="index.html">TRANG CHỦ</a></li>
+        <li class="nav-content"><a href="">TIN TỨC</a></li>
+        <li class="nav-content"><a href="">THÔNG BÁO</a></li>
+        <li class="nav-content dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">ĐÀO TẠO</a>
           <ul class="dropdown-menu">
             <li><a href="#">Đại Học Chính Quy</a></li>
             <li><a href="#">Vừa Làm Vừa Học</a></li>
             <li><a href="#">Sau Đại Học</a></li>
           </ul>
         </li>
-        <li class="dropdown">
-          <a href="" class="nav-content dropdown-toggle" id="nc-dd" data-toggle="dropdown">NGHIÊN CỨU KHOA
+        <li class="nav-content dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">NGHIÊN CỨU KHOA
             HỌC</a>
           <ul class="dropdown-menu">
             <li><a href="#">Đề Tài Đang Triển Khai</a></li>
@@ -52,16 +98,16 @@
             <li><a href="#">Công Bố Khoa Học</a></li>
           </ul>
         </li>
-        <li class="dropdown">
-          <a href="" class="nav-content dropdown-toggle" id="ht-dd" data-toggle="dropdown">HỢP TÁC QUỐC TẾ</a>
+        <li class="nav-content dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">HỢP TÁC QUỐC TẾ</a>
           <ul class="dropdown-menu">
             <li><a href="#">Giới Thiệu Chung</a></li>
             <li><a href="#">Hoạt Động Hợp Tác</a></li>
             <li><a href="#">Đối Tác</a></li>
           </ul>
         </li>
-        <li class="dropdown">
-          <a href="" class="nav-content dropdown-toggle" id="sv-dd" data-toggle="dropdown">SINH VIÊN</a>
+        <li class="nav-content dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">SINH VIÊN</a>
           <ul class="dropdown-menu">
             <li><a href="#">Cổng Thông Tin Sinh Viên</a></li>
             <li><a href="#">Sổ Tay Sinh Viên</a></li>
@@ -71,59 +117,9 @@
             <li><a href="#">Thư Điện Tử</a></li>
           </ul>
         </li>
-        <li><a href="" class="nav-content">ĐIỂM NHẤN </a></li>
-        <li><a href="" class="nav-content">TUYỂN SINH</a></li>
-        <li><a href="" class="nav-content">LIÊN HỆ</a></li>
-        <li><a href="" class="nav-content" data-toggle="modal" data-target="#login">ĐĂNG NHẬP</a></li>
-
-        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Đăng Nhập</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-              <div class="modal-body">
-                <div class="container-fluid">
-                  <input type="email" name="email" id="email" placeholder="Nhập địa chỉ email" required>
-                  <input type="password" name="password" id="password" placeholder="Nhập mật khẩu" required>
-                  <input type="checkbox" name="remember" id="remember"><label for="remember">Ghi Nhớ?</label>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-signup" data-toggle="modal" data-target="#signin" data-dismiss="modal">Đăng Ký</button>
-                <button type="button" class="btn btn-login">Đăng Nhập</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Đăng Ký</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-              <div class="modal-body">
-                <div class="container-fluid">
-                  <input type="email" name="email" id="email" placeholder="Nhập địa chỉ email" required>
-                  <input type="email" name="re-email" id="re-email" placeholder="Nhập lại địa chỉ email" required>
-                  <input type="password" name="password" id="password" placeholder="Nhập mật khẩu" required>
-                  <h5>Thông tin cá nhân</h5>
-                  <input type="text" name="fullname" id="fullname" placeholder="Họ và Tên" required>
-                  <input type="tel" name="phone" id="phone" placeholder="Điện thoại" required>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-signup">Đăng Ký</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <li class="nav-content"><a href="">ĐIỂM NHẤN </a></li>
+        <li class="nav-content"><a href="">TUYỂN SINH</a></li>
+        <li class="nav-content"><a href="" data-toggle="modal" data-target="#login">ĐĂNG NHẬP</a></li>
       </ul>
     </nav>
   </header>
@@ -133,7 +129,7 @@
       <nav id="main-menu">
         <div id="search-form">
           <input type="search" id="search-box" placeholder="Google Search">
-          <a href="" id="search-btn" target="_blank" rel="noopener noreferrer">Tìm Kiếm</a>
+          <a href="" id="search-btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-search"></i></a>
         </div>
 
         <ul id="menu-nav">
@@ -167,8 +163,12 @@
           </li>
         </ul>
 
-        <iframe id="youtube-video" src="https://www.youtube.com/embed/uU-tDHxaCVA"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="video">
+          <img id="youtube-video" src="Image/video.png" alt="video">
+          <a href="https://www.youtube.com/embed/uU-tDHxaCVA" class="play-video tamgiac" target="_blank" rel="noopener noreferrer"></a>
+        </div>
+
+        <div class="ads"><img class="left-side-img" src="Image/trongdong.png" alt="Trống Đồng"></div>
       </nav>
     </div>
 
@@ -179,7 +179,7 @@
       </div>
       <div class="slides">
         <a href="">
-          <img src="Image/slide1.jpg">
+          <img src="Image/slide2.jpg">
           <div class="caption-container">
             <a href="">Dự kiến Thông tin Tuyển sinh Đại học chính quy năm 2020</a>
           </div>
@@ -187,7 +187,7 @@
       </div>
       <div class="slides">
         <a href="">
-          <img src="Image/slide2.jpg">
+          <img src="Image/slide1.jpg">
           <div class="caption-container">
             <a href="">Thông báo về việc kéo dài kỳ nghỉ Tết để phòng tránh dịch Cúm Corona</a>
           </div>
@@ -439,47 +439,111 @@
         </nav>
       </div>
 
+      <div id="social">
+        <a href="#header"><img class="sticky-btn up" src="Image/chevron-up.png" alt="Header"></a>
+        <a href="https://www.facebook.com/huc1959/" target="_blank" rel="noopener noreferrer"><img class="sticky-btn fb" src="Image/facebook.png" alt="facebook" ></a>
+        <a href="https://www.youtube.com/c/TrườngĐạihọcVănhóaHàNội" target="_blank" rel="noopener noreferrer"><img class="sticky-btn yt" src="Image/youtube.png" alt="youtube"></a>
+        <a href="#visited"><img class="sticky-btn down" src="Image/chevron-down.png" alt="Footer"></a>
+      </div>
+
     </div>
   </main>
-
-  <div id="social">
-    <a href="https://www.facebook.com/huc1959/" target="_blank" rel="noopener noreferrer">
-      <img class="fb" src="Image/facebook.png" alt="facebook" >
-    </a>
-    <a href="https://www.youtube.com/c/TrườngĐạihọcVănhóaHàNội" target="_blank" rel="noopener noreferrer">
-      <img class="yt" src="Image/youtube.png" alt="youtube">
-    </a>
-  </div>
 
   <footer id="footer">
     <p id="uni-name">© 2020 - Trường Đại Học Văn Hoá Hà Nội - Hanoi University Of Culture</p>
     <div id="footer-content">
-      <div id="info">
-        <div id="contact">
-          <div id="email"><a href="mailto:daihocvanhoahanoi@huc.edu.vn"><i class="far fa-envelope"></i> daihocvanhoahanoi@huc.edu.vn</a></div>
-          <div id="tel"><a href="tel:+842438511971"><i class="fas fa-phone"></i> (+84) 2438.511.971</a></div>
-          <div id="fax"><a href="tel:+842435141629"><i class="fas fa-fax"></i> (+84) 2435.141.629</a></div>
-          <!-- <div id="social">
-            <a href="https://www.facebook.com/huc1959/" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.youtube.com/c/TrườngĐạihọcVănhóaHàNội" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-youtube"></i></a>
-          </div> -->
-          <p id="visited">Online: 4</p>
-          <p id="visited">Lượt truy cập: 1.902.534</p>
+      <div id="address">
+        <h3 class="footer-content-header">Địa Chỉ</h3>
+        <div>
+          <div>
+            <a href="https://www.google.com/maps?ll=21.023835,105.82274&z=17&t=m&hl=vi&gl=US&mapclient=embed&cid=7836784963568892371"><img src="Image/maps.png" alt="Map" id="map"></a>
+          </div>
+          <ul>
+              <li><address><i class="fas fa-map-marked-alt"></i> 418 Đường La Thành - Quận Đống Đa - Hà Nội</address></li>
+              <li>
+            <a href="mailto:daihocvanhoahanoi@huc.edu.vn"><i class="far fa-envelope"></i> daihocvanhoahanoi@huc.edu.vn</a>
+
+              </li>
+              <li>
+            <a href="tel:+842438511971"><i class="fas fa-phone"></i> (+84) 2438.511.971</a>
+
+              </li>
+              <li>
+            <a href="tel:+842435141629"><i class="fas fa-fax"></i> (+84) 2435.141.629</a>
+
+              </li>
+          </ul>
         </div>
-        <div id="address">
-          <a href="https://www.google.com/maps?ll=21.023835,105.82274&z=17&t=m&hl=vi&gl=US&mapclient=embed&cid=7836784963568892371"><img src="Image/maps.png" alt="Map" id="map"></a>
-          <address><i class="fas fa-map-marked-alt"></i> Địa chỉ: 418 Đường La Thành - Quận Đống Đa - Hà Nội- Việt
-            Nam</address>
+      </div>
+      <form id="contact">
+        <h3 class="footer-content-header">Liên Hệ</h3>
+        <div>
+          <div>
+            <input type="text" name="name" id="contact-name" placeholder="Họ Tên">
+            <input type="email" name="email" id="contact-email" placeholder="Email">
+            <input type="number" name="phone" id="contact-phone" placeholder="Điện Thoại">
+          </div>
+          <textarea name="content" id="contact-content" cols="25" rows="6" placeholder="Nội Dung"></textarea>
+        </div>
+        <button type="submit">Liên Hệ Ngay</button>
+      </form>
+    </div>
+    <div id="visited">
+      <p>Online: 4</p>
+      <p>Lượt truy cập: 1.905.534</p>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="LoginModel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Đăng Nhập</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <input type="email" name="email" id="login-email" placeholder="Nhập địa chỉ email" required>
+            <input type="password" name="password" id="login-password" placeholder="Nhập mật khẩu" required>
+            <input type="checkbox" name="remember" id="login-remember"><label for="remember">Ghi Nhớ?</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-signup" data-toggle="modal" data-target="#signup" data-dismiss="modal">Đăng Ký</button>
+          <button type="button" class="btn btn-login">Đăng Nhập</button>
         </div>
       </div>
     </div>
-    
-  </footer>
-  <!-- Optional JavaScript -->
+  </div>
 
+  <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="SignupModel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Đăng Ký</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <input type="email" name="email" id="signup-email" placeholder="Nhập địa chỉ email" required>
+            <input type="email" name="re-email" id="signup-re-email" placeholder="Nhập lại địa chỉ email" required>
+            <input type="password" name="password" id="signup-password" placeholder="Nhập mật khẩu" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-signup">Đăng Ký</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
   <script defer src="lib/jquery-3.4.1.min.js"></script>
+  <script defer src="lib/popper.min.js"></script>
   <script async src="javascript.js"></script>
   <script defer src="lib/boostrap/bootstrap.min.js"></script>
   <script defer src="lib/font awesome/all.min.js"></script>
