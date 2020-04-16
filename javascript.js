@@ -1,5 +1,5 @@
 // declare valuables
-let slides = document.getElementsByClassName("slides");
+const slides = document.getElementsByClassName("slides");
 const searchValue = document.getElementById('search-box');
 const searchBtn = document.getElementById('search-btn');
 const navbar = document.getElementById("nav-content-collasp");
@@ -9,6 +9,22 @@ const collaspBtn = document.getElementById('collaspe-btn');
 const dropdownList = document.querySelectorAll('#ver-nav .dropdown-menu');
 const dropdownBtn = document.querySelectorAll('#ver-nav .dropdown');
 const listStatus = {}; // sub dropdown menu
+
+//Dynamic banner
+const bannerImg = document.getElementById('banner-img');
+const bannerImgNum = 3;
+let bannerindex = 1;
+setInterval(() => {
+  changeBanner();
+}, 3000);
+
+function changeBanner() {
+  
+  bannerImg.setAttribute('src', `Image/banner${bannerindex}.jpg`);
+  bannerindex++;
+  if(bannerindex > bannerImgNum) bannerindex = 1;
+}
+
 
 
 // slide
@@ -108,4 +124,12 @@ for (let i = 0; i < dropdownBtn.length; i++) {
     listStatus[i] = !listStatus[i];
     hideSubItem(dropdownList[i], listStatus[i]);
   });
+}
+
+// sub-page 
+const subPage = {};
+const abc = document.querySelectorAll('a[sub-page]');
+for (let index = 0; index < abc.length; index++) {
+  // console.log(abc[index]);
+  
 }
