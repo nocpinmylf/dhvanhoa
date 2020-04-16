@@ -102,6 +102,13 @@ address {
   margin-bottom: 0;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
 a:hover,
 #footer a:hover,
 .caption-container a:hover {
@@ -157,6 +164,7 @@ a:not([href]),
   color: #fff;
 }
 
+.sticky,
 .btn-login,
 .header-nav,
 .modal-header,
@@ -185,11 +193,19 @@ a:not([href]),
 
 #banner-img {
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: 25rem;
   -webkit-box-shadow: 0 0 5px #b3b3b3;
   box-shadow: 0 0 5px #b3b3b3;
   z-index: -10;
+}
+
+#logo {
+  width: 3em;
+  padding: 5px;
+  border-radius: 50%;
+  -webkit-animation: rotate infinite 5s linear;
+  animation: rotate infinite 5s linear;
 }
 
 .sticky-btn {
@@ -258,6 +274,8 @@ a:not([href]),
 #collaspe-btn {
   background-color: transparent;
   border: none;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #collaspe-btn:hover {
@@ -270,16 +288,20 @@ a:not([href]),
 
 #ver-nav {
   position: fixed;
-  width: 0;
+  /* width: 0; */
   top: 0;
   left: 0;
   height: 100%;
   z-index: 999;
+  overflow: hidden auto;
+  background-color: #3f3f3fd8;
+}
+
+#ver-nav>.header-nav-list {
+  width: 0;
   -webkit-transition: .5s;
   -o-transition: .5s;
   transition: .5s;
-  overflow: hidden auto;
-  background-color: #3f3f3fd8;
 }
 
 #nav-content-collasp {
@@ -521,7 +543,7 @@ li.dropdown:hover>.dropdown-menu {
 
 .tamgiac {
   width: 0;
-	height: 0;
+  height: 0;
 	border-top: 25px solid transparent;
 	border-left: 50px solid #3f3f3fda;
 	border-bottom: 25px solid transparent;
@@ -806,10 +828,10 @@ li.dropdown:hover>.dropdown-menu {
 
 @media (max-width: 1025px) {
 
+
+  .banner,
   #banner-img {
-    top: 0;
-    position: block;
-    height: 16em;
+    height: 18rem;
   }
 
   #ver-nav .header-nav-list {
@@ -865,14 +887,6 @@ li.dropdown:hover>.dropdown-menu {
     grid-template-areas: "rside" "lside";
   }
 
-  #logo {
-    width: 3em;
-    padding: 5px;
-    border-radius: 50%;
-    -webkit-animation: rotate infinite 5s linear;
-    animation: rotate infinite 5s linear;
-  }
-
   .slides img {
     height: 350px;
   }
@@ -917,10 +931,17 @@ li.dropdown:hover>.dropdown-menu {
   }
 }
 
+/* @media (max-width: 850px) {
+  #banner-img {
+    height: 15rem;
+  }
+} */
+
 @media (max-width: 768px) {
-  .banner {
+
+  .banner,
+  #banner-img {
     height: 13rem;
-    background-size: 100% 13rem;
   }
 
   .sticky-btn {
@@ -1061,6 +1082,11 @@ li.dropdown:hover>.dropdown-menu {
   }
 
   .prev, .next {
-    top: 19rem;
+    top: 16rem;
+  }
+
+  .banner,
+  #banner-img {
+    height: 10rem;
   }
 }

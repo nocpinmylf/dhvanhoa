@@ -8,26 +8,30 @@ const down = document.getElementsByClassName('down')[0];
 const collaspBtn = document.getElementById('collaspe-btn');
 const dropdownList = document.querySelectorAll('#ver-nav .dropdown-menu');
 const dropdownBtn = document.querySelectorAll('#ver-nav .dropdown');
-const listStatus = {}; // sub dropdown menu
-
-//Dynamic banner
+const navbarFull = document.getElementById('nav-full');
+const verNav = document.querySelector('#ver-nav>.header-nav-list');
+const navElem = document.querySelectorAll('#ver-nav .nav-content');
 const bannerImg = document.getElementById('banner-img');
+
+const listStatus = {}; // sub dropdown menu
 const bannerImgNum = 3;
 let bannerindex = 1;
+let breakpoint = navbar.offsetTop;
+let breakpointFull = navbarFull.offsetTop;
+//Dynamic banner
+
+
 setInterval(() => {
   changeBanner();
 }, 3000);
 
 function changeBanner() {
-  
   bannerImg.setAttribute('src', `Image/banner${bannerindex}.jpg`);
   bannerindex++;
   if(bannerindex > bannerImgNum) bannerindex = 1;
 }
 
-
-
-// slide
+// Slide
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -77,12 +81,22 @@ window.addEventListener("scroll", () => {
   let dheight = $(document).height();
   window.pageYOffset < 200 ? up.style.display = "none" : up.style.display = "";
   (dheight - window.pageYOffset) < 800 ? down.style.display = "none": down.style.display = "";
+
+  // sticky nav
+  sticky(navbar, breakpoint);
+  sticky(navbarFull, breakpointFull);
+
 });
 
-// responsive ver-nav 
-const verNav = document.getElementById('ver-nav');
-const navElem = document.querySelectorAll('#ver-nav .nav-content'); 
+function sticky(element, breakpoint) {
+  if (window.pageYOffset >= breakpoint) {
+    element.classList.add("sticky")
+  } else {
+    element.classList.remove("sticky");
+  }
+}
 
+// responsive ver-nav 
 collaspBtn.addEventListener('click', () => {
   if (verNav.style.width == '300px') {
     verNav.style.width = '0px';
