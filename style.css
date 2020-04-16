@@ -22,6 +22,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 ul {
@@ -387,6 +388,10 @@ a:not([href]) {
   margin: 1.5em auto;
 }
 
+.ads .left-side-img {
+  animation: rotate 30s linear infinite;
+}
+
 .play-video {
   position: absolute  ;
   top: 50%;
@@ -548,7 +553,7 @@ a:not([href]) {
 #uni-name {
   display: block;
   background-color: #3f3f3f;
-  padding: 10px;
+  padding: 10px 10px 10px 40px;
   margin-bottom: 10px;
   text-align: left;
   font-size: 1.5em;
@@ -609,7 +614,7 @@ a:not([href]) {
 
 #map {
   border-radius: 4px;
-  width: 25em;
+  width: 23em;
   height: 15em;
 }
 
@@ -624,11 +629,18 @@ a:not([href]) {
   margin-left: 15px;
 }
 
-#info,
 #address {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+#address>div>div:first-child {
+  margin-right: 30px;
+}
+
+#address>div>div:last-child {
+  margin-left: 30px;
 }
 
 #info>div {
@@ -649,9 +661,31 @@ p {
   margin: 1em;
 }
 
+.footer-menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-menu>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footer-menu a {
+  padding: 10px;
+  background-color: #9c1b0dd5;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footer-menu a:hover {
+  background-color: #9c1b0d;
+}
+
 /* responsive=====================*/
 
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   #main {
     grid-template-columns: 1fr;
     grid-template-areas: "rside" "lside";
@@ -696,29 +730,23 @@ p {
   
   .dropdown-menu {
     position: relative;
-    background-color: #3f3f3fd3;
-    border-radius: 0;
-    min-width: 15rem;
-    top: 94%;
+    background-color: transparent;
+    text-align: center;
     padding: 0;
+    border: 0;
+    margin-left: 15px;
   }
   
   .dropdown-menu a {
     display: block;
     padding: 8px 5px;
-    color: #ffffff;
     border-bottom: 1px dotted #ffffff;
   }
   
   .dropdown-menu a:hover {
     color: #fbff05;
     font-style: italic;
-    transition: all .3s ease-in;
   }
-  
-  /* li.dropdown:hover>.dropdown-menu {
-    display: none;
-  } */
 
 /* ==================== */
 
@@ -761,6 +789,10 @@ p {
   #address>div {
     flex-direction: column;
   }
+
+  #address>div>div {
+    margin: 10px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -783,6 +815,10 @@ p {
   
   .up {
     bottom: 15em;
+  }
+
+  .modal {
+    width: 90%;
   }
 
   /* main */
@@ -839,6 +875,7 @@ p {
   #uni-name {
     text-align: center;
     font-size: 1.5em;
+    padding: 10px;
   }
 
   #contact {
@@ -862,11 +899,19 @@ p {
   #contact textarea {
     margin-top: 15px;
     height: 50px;
-    width: 85%;
+    width: 83%;
   }
 
   #address ul {
     text-align: center;
+    margin-left: 0;
+  }
+
+  #address>div>div:first-child {
+    margin-right: 0;
+  }
+  
+  #address>div>div:last-child {
     margin-left: 0;
   }
 
