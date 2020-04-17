@@ -200,12 +200,21 @@ a:not([href]),
   z-index: -10;
 }
 
-#logo {
+.logo {
   width: 3em;
   padding: 5px;
   border-radius: 50%;
   -webkit-animation: rotate infinite 5s linear;
   animation: rotate infinite 5s linear;
+}
+
+.banner .logo {
+  animation: none;
+  position: absolute;
+  width: 10rem;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 1;
 }
 
 .sticky-btn {
@@ -230,8 +239,9 @@ a:not([href]),
 }
 
 #lang-eng {
-  width: 30px;
-  height: 20px;
+  width: 3em;
+  height: 2.5em;
+  padding: 5px;
 }
 
 .modal-body input {
@@ -828,7 +838,6 @@ li.dropdown:hover>.dropdown-menu {
 
 @media (max-width: 1025px) {
 
-
   .banner,
   #banner-img {
     height: 18rem;
@@ -840,6 +849,10 @@ li.dropdown:hover>.dropdown-menu {
 
   .appear {
     display: block !important;
+  }
+
+  .hide {
+    display: none;
   }
   
   .nav-content {
@@ -872,11 +885,14 @@ li.dropdown:hover>.dropdown-menu {
     background-color: transparent;
     text-align: center;
     border: 0;
-    margin-left: 15px;
+    font-size: 12px;
+    min-width: 13rem;
+    margin-left: 10px;
   }
   
   .dropdown-menu a {
     border-bottom: 1px dotted #ffffff;
+    padding: 8px 0;
   }
 
 /* ==================== */
@@ -942,6 +958,12 @@ li.dropdown:hover>.dropdown-menu {
   .banner,
   #banner-img {
     height: 13rem;
+  }
+
+  .banner .logo {
+    width: 5rem;
+    top: 1rem;
+    left: 1rem;
   }
 
   .sticky-btn {

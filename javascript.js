@@ -12,7 +12,7 @@ const navbarFull = document.getElementById('nav-full');
 const verNav = document.querySelector('#ver-nav>.header-nav-list');
 const navElem = document.querySelectorAll('#ver-nav .nav-content');
 const bannerImg = document.getElementById('banner-img');
-
+const logo = document.querySelector('#nav-content-collasp .logo');
 const listStatus = {}; // sub dropdown menu
 const bannerImgNum = 3;
 let bannerindex = 1;
@@ -85,7 +85,7 @@ window.addEventListener("scroll", () => {
   // sticky nav
   sticky(navbar, breakpoint);
   sticky(navbarFull, breakpointFull);
-
+  hideLogo(breakpoint);
 });
 
 function sticky(element, breakpoint) {
@@ -96,16 +96,24 @@ function sticky(element, breakpoint) {
   }
 }
 
+function hideLogo(breakpoint) {
+  if (window.pageYOffset >= breakpoint) {
+    logo.classList.remove("hide");
+  } else {
+    logo.classList.add("hide");
+  }
+}
+
 // responsive ver-nav 
 collaspBtn.addEventListener('click', () => {
-  if (verNav.style.width == '300px') {
+  if (verNav.style.width == '250px') {
     verNav.style.width = '0px';
     for (let i = 0; i < navElem.length; i++) {
       navElem[i].classList.remove('appear');
     }
   }
   else {
-    verNav.style.width = '300px';
+    verNav.style.width = '250px';
     for (let i = 0; i < navElem.length; i++) {
       navElem[i].classList.add('appear');
     }
