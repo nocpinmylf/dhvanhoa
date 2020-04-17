@@ -26,48 +26,15 @@ setInterval(() => {
 }, 3000);
 
 function changeBanner() {
-  bannerImg.setAttribute('src', `Image/banner${bannerindex}.jpg`);
+  bannerImg.setAttribute('src', `../Image/banner${bannerindex}.jpg`);
   bannerindex++;
   if(bannerindex > bannerImgNum) bannerindex = 1;
 }
-
-// Slide
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-
-  if (n > slides.length) slideIndex = 1;
-  if (n < 1) slideIndex = slides.length;
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex - 1].style.display = "block";
-}
-
-setInterval(() => {
-  plusSlides(1);
-}, 4000);
 
 // search box
 searchBtn.addEventListener('click', () => {
   searchBtn.setAttribute('href', `https://www.google.nl/search?q=${searchValue.value}+huc.edu.vn`);
 });
-
-// get time 
-document.getElementById('time').innerText = getTime();
-function getTime() {
-  let date = new Date();
-  return "Ngày: " + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
-}
 
 // vertical nav dropdown
 $('.sub-menu').hide();
@@ -102,6 +69,13 @@ function hideLogo(breakpoint) {
   } else {
     logo.classList.add("hide");
   }
+}
+
+// get time 
+document.getElementById('time').innerText = getTime();
+function getTime() {
+  let date = new Date();
+  return "Ngày: " + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
 }
 
 // responsive ver-nav 
